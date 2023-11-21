@@ -2,3 +2,22 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+/* Estilo para la tabla ngx-datatable */
+.custom-table {
+    margin-left: 20px; /* Sangría a la derecha */
+    background-color: #2c3e50; /* Fondo oscuro */
+    color: #ecf0f1; /* Texto claro */
+  }
+
+/* Estilo para el contenedor de la tabla */
+.table-container {
+    margin-left: 100px; /* Sangría a la derecha */
+    max-width: 500px; /* Ancho máximo del contenedor */
+    background-color: #2c3e50; /* Fondo oscuro */
+    color: #ecf0f1; /* Texto claro */
+    padding: 10px; /* Añade algún espacio entre el contenido y el borde del contenedor */
+    border-radius: 8px; /* Agrega esquinas redondeadas si lo deseas */
+  }

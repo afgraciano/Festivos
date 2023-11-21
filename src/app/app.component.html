@@ -25,10 +25,28 @@
 <!-- Botón para obtener festivos del año indicado -->
 <button mat-raised-button color="primary" (click)="obtenerFestivos()">Obtener Festivos</button>
 
+
+
+<!-- Contenedor con fondo oscuro limitado al ancho de la tabla -->
+<div class="table-container">
+  <ngx-datatable [headerHeight]="50" [footerHeight]="50" [rowHeight]="20" [rows]="festivos"
+    [columns]="columnas" [columnMode]="modoColumna?.force" [limit]="25" [selectionType]="tipoSeleccion.single"
+    (activate)="onActivate($event)" [rowHeight]="'auto'">
+  </ngx-datatable>
+</div>
+
+
+<!-- Tabla para mostrar los festivos con estilos personalizados -->
+<!--<ngx-datatable class="custom-table" [headerHeight]="50" [footerHeight]="50" [rowHeight]="20" [rows]="festivos"
+  [columns]="columnas" [columnMode]="modoColumna?.force" [limit]="25" [selectionType]="tipoSeleccion.single"
+  (activate)="onActivate($event)" [rowHeight]="'auto'">
+</ngx-datatable>-->
+
 <!-- Tabla para mostrar los festivos -->
+<!-- 
 <ngx-datatable class="dark" [headerHeight]="50" [footerHeight]="50" [rowHeight]="20" [rows]="festivos"
   [columns]="columnas" [columnMode]="modoColumna?.force" [limit]="25" [selectionType]="tipoSeleccion.single"
   (activate)="onActivate($event)" [rowHeight]="'auto'">
-</ngx-datatable>
+</ngx-datatable>-->
 
 
