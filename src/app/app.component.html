@@ -29,12 +29,38 @@
 
 <!-- Contenedor con fondo oscuro limitado al ancho de la tabla -->
 <div class="table-container">
-  <ngx-datatable [headerHeight]="50" [footerHeight]="50" [rowHeight]="20" [rows]="festivos"
-    [columns]="columnas" [columnMode]="modoColumna?.force" [limit]="25" [selectionType]="tipoSeleccion.single"
+  <ngx-datatable [headerHeight]="50" [footerHeight]="50" [rowHeight]="20" [rows]="festivos" [columns]="columnas"
+    [columnMode]="modoColumna?.force" [limit]="22" [selectionType]="tipoSeleccion.single"
     (activate)="onActivate($event)" [rowHeight]="'auto'">
+
+    <!-- Columna Festivo -->
+    <ngx-datatable-column name="Festivo" prop="festivo" [flexGrow]="100">
+      <!-- Ajusta el ancho de la columna Festivo según tus necesidades -->
+    </ngx-datatable-column>
+
+    <!-- Columna Fecha -->
+    <ngx-datatable-column name="Fecha" prop="fecha" [flexGrow]="1">
+      <!-- Ajusta el ancho de la columna Fecha según tus necesidades -->
+    </ngx-datatable-column>
   </ngx-datatable>
 </div>
 
+
+
+<!-- Contenedor con fondo oscuro limitado al ancho de la tabla y ampliar ancho de columnas -->
+<!--<ngx-datatable class="dark" [headerHeight]="50" [footerHeight]="50" [rowHeight]="20" [rows]="festivos"
+  [columns]="columnas" [columnMode]="modoColumna?.force" [limit]="25" [selectionType]="tipoSeleccion.single"
+  (activate)="onActivate($event)" [rowHeight]="'auto'">-->
+<!-- Columna Festivo -->
+<!-- <ngx-datatable-column name="Festivo" prop="festivo" [flexGrow]="12">-->
+<!-- Ajusta el ancho de la columna Festivo según tus necesidades -->
+<!-- </ngx-datatable-column>-->
+
+<!-- Columna Fecha -->
+<!-- <ngx-datatable-column name="Fecha" prop="fecha" [flexGrow]="1"> -->
+<!-- Ajusta el ancho de la columna Fecha según tus necesidades -->
+<!--</ngx-datatable-column>
+</ngx-datatable>-->
 
 <!-- Tabla para mostrar los festivos con estilos personalizados -->
 <!--<ngx-datatable class="custom-table" [headerHeight]="50" [footerHeight]="50" [rowHeight]="20" [rows]="festivos"
@@ -48,5 +74,3 @@
   [columns]="columnas" [columnMode]="modoColumna?.force" [limit]="25" [selectionType]="tipoSeleccion.single"
   (activate)="onActivate($event)" [rowHeight]="'auto'">
 </ngx-datatable>-->
-
-
